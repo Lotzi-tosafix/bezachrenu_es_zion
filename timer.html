@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="he">
- 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,7 @@
             --border-color: #444;
             --text-color: #ffffff;
             --highlight-color: #ffffff;
-            --secondary-text-color: #ffffff; /* שינוי הצבע ללבן */
+            --secondary-text-color: #ffffff;
             --shadow-color: rgba(255, 255, 255, 0.1);
             --overlay-opacity: 0.5;
             --unit-background-color: rgba(142, 136, 136, 0.5);
@@ -25,12 +24,15 @@
             margin: 0;
             font-family: 'Bona Nova SC', Arial, sans-serif;
             color: var(--text-color);
+            /* מרכוז התוכן */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
  
         #popup-container {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
+            position: relative; /* שונה מ-fixed */
             background-color: var(--overlay-background);
             border-radius: 10px;
             padding: 15px;
@@ -77,7 +79,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
-            flex-direction: row-reverse;
+            /* נמחקה השורה flex-direction: row-reverse; */
         }
  
         .unit {
@@ -89,7 +91,7 @@
  
         .unit-title {
           font-size: 14px;
-          color: var(--secondary-text-color); /* כעת בצבע לבן */
+          color: var(--secondary-text-color);
             margin-top: 4px;
         }
  
@@ -121,18 +123,6 @@
             font-weight: 700;
         }
  
-        @media (max-width: 480px) {
-            #popup-container {
-                width: 80vw;
-                padding: 5px;
-                right: 5vw;
-            }
- 
-            .unit-value {
-                font-size: 14px;
-                height: auto;
-            }
-        }
     </style>
 </head>
  
@@ -175,6 +165,4 @@
         updateTimer();
     </script>
 </body>
- 
 </html>
- 
