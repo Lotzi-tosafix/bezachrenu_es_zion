@@ -8,11 +8,10 @@
 
 ![תצוגה מקדימה של הטיימר](https://github.com/user-attachments/assets/7513e6dc-57d8-46d5-977a-63b3041190eb)
 
-
 ## הדגמה חיה
 
-*   **[קישור לגרסה בעברית](https://lotzi-tosafix.github.io/temple-timer/timer-he.html)**
-*   **[קישור לגרסה באנגלית](https://lotzi-tosafix.github.io/temple-timer/timer-en.html)**
+*   **[קישור לגרסה בעברית](https://lotzi-tosafix.github.io/bezachrenu_es_zion/timer-he.html)**
+*   **[קישור לגרסה באנגלית](https://lotzi-tosafix.github.io/bezachrenu_es_zion/timer-en.html)**
 
 ## איך להטמיע באתר שלכם
 
@@ -23,7 +22,7 @@
 ### **גרסה בעברית**
 
 ```html
-<iframe src="https://lotzi-tosafix.github.io/temple-timer/timer-he.html" width="330" height="215" style="border:none; overflow:hidden;" title="טיימר חורבן בית המקדש"></iframe>
+<iframe src="https://lotzi-tosafix.github.io/bezachrenu_es_zion/timer-he.html" width="330" height="215" style="border:none; overflow:hidden;" title="טיימר חורבן בית המקדש"></iframe>
 ```
 
 ---
@@ -31,7 +30,7 @@
 ### **גרסה באנגלית (English Version)**
 
 ```html
-<iframe src="https://lotzi-tosafix.github.io/temple-timer/timer-en.html" width="330" height="215" style="border:none; overflow:hidden;" title="Beit HaMikdash Destruction Timer"></iframe>
+<iframe src="https://lotzi-tosafix.github.io/bezachrenu_es_zion/timer-en.html" width="330" height="215" style="border:none; overflow:hidden;" title="Beit HaMikdash Destruction Timer"></iframe>
 ```
 
 ---
