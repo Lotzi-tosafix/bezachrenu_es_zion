@@ -1,25 +1,44 @@
-# טיימר חורבן בית המקדש
+# טיימר חורבן בית המקדש (Temple Destruction Timer)
 
 פרויקט זה הוא ווידג'ט פשוט המציג טיימר דינמי הסופר את הזמן שחלף מאז חורבן בית המקדש השני.
-הווידג'ט נועד להטמעה פשוטה בכל אתר אינטרנט באמצעות `<iframe>`.
+
+הווידג'ט זמין בשתי שפות (עברית ואנגלית), קל להטמעה בכל אתר אינטרנט באמצעות `<iframe>`, והוא כולו לחיץ ומפנה את המשתמש לדף המפתחים של Tosafix.
 
 ## תצוגה מקדימה
 
-![תצוגה מקדימה של הטיימר](https://github.com/user-attachments/assets/7513e6dc-57d8-46d5-977a-63b3041190eb) 
+![תצוגה מקדימה של הטיימר](https://github.com/user-attachments/assets/7513e6dc-57d8-46d5-977a-63b3041190eb)
 
-**[קישור לדף הטיימר הפעיל](https://lotzi-tosafix.github.io/temple-timer/timer.html)**
 
-## איך להטמיע את הטיימר באתר שלך
+## הדגמה חיה
 
-כדי להטמיע את הטיימר באתר שלכם, פשוט העתיקו והדביקו את קוד ה-HTML הבא במקום הרצוי בעמוד שלכם:
+*   **[קישור לגרסה בעברית](https://lotzi-tosafix.github.io/temple-timer/timer-he.html)**
+*   **[קישור לגרסה באנגלית](https://lotzi-tosafix.github.io/temple-timer/timer-en.html)**
+
+## איך להטמיע באתר שלכם
+
+כדי להוסיף את הטיימר לאתר, פשוט העתיקו והדביקו את קוד ה-HTML המתאים במקום הרצוי בעמוד שלכם.
+
+---
+
+### **גרסה בעברית**
 
 ```html
-<iframe src="https://lotzi-tosafix.github.io/temple-timer/timer.html" width="330" height="215" style="border:none; overflow:hidden;" title="טיימר חורבן בית המקדש"></iframe>
+<iframe src="https://lotzi-tosafix.github.io/temple-timer/timer-he.html" width="330" height="215" style="border:none; overflow:hidden;" title="טיימר חורבן בית המקדש"></iframe>
 ```
+
+---
+
+### **גרסה באנגלית (English Version)**
+
+```html
+<iframe src="https://lotzi-tosafix.github.io/temple-timer/timer-en.html" width="330" height="215" style="border:none; overflow:hidden;" title="Beit HaMikdash Destruction Timer"></iframe>
+```
+
+---
 
 ### התאמה אישית
 
-ניתן לשנות את הגודל של החלונית על ידי שינוי הערכים `width` (רוחב) ו-`height` (גובה) בקוד ה-iframe בהתאם לעיצוב האתר שלכם.
+ניתן לשנות את הגודל של חלונית הטיימר על ידי שינוי הערכים `width` (רוחב) ו-`height` (גובה) בקוד ה-iframe, כדי להתאים אותו באופן מושלם לעיצוב האתר שלכם.
 
 ## קרדיטים
 
