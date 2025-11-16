@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample page</title>
+    <title>טיימר בית המקדש</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC&display=swap');
  
@@ -24,7 +24,6 @@
             margin: 0;
             font-family: 'Bona Nova SC', Arial, sans-serif;
             color: var(--text-color);
-            /* מרכוז התוכן */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,7 +31,7 @@
         }
  
         #popup-container {
-            position: relative; /* שונה מ-fixed */
+            position: relative;
             background-color: var(--overlay-background);
             border-radius: 10px;
             padding: 15px;
@@ -79,7 +78,6 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
-            /* נמחקה השורה flex-direction: row-reverse; */
         }
  
         .unit {
@@ -100,7 +98,7 @@
             align-items: center;
             justify-content: center;
             border: none;
-            padding: 4px;
+            padding: 4px 6px;
             border-radius: 6px;
             background-color: var(--unit-background-color);
             font-family: 'Digital-7', Arial, sans-serif;
@@ -108,7 +106,6 @@
             font-weight: 700;
             color: var(--text-color);
             min-width: 20px;
-            width: 20px;
             height: 24px;
             line-height: 24px;
             text-align: center;
@@ -127,27 +124,29 @@
 </head>
  
 <body>
-    <div id="popup-container">
-        <div id="popup-background"></div>
-        <div id="temple-counter">
-            <h2>זמן שחלף מאז חורבן בית המקדש</h2>
-            
-            <div class="time-row">
-                <div class="unit"><div class="unit-value" id="years">0</div><div class="unit-title">שנים</div></div>
-                <div class="unit"><div class="unit-value" id="months">0</div><div class="unit-title">חודשים</div></div>
-                <div class="unit"><div class="unit-value" id="days">0</div><div class="unit-title">ימים</div></div>
+    <a href="https://tosafix.vercel.app/#/developers:~:text=output%20processed_image.png-,%D7%98%D7%99%D7%99%D7%9E%D7%A8%20%D7%91%D7%99%D7%AA%20%D7%94%D7%9E%D7%A7%D7%93%D7%A9,-%D7%94%D7%95%D7%A1%D7%99%D7%A4%D7%95%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" style="text-decoration: none; color: inherit;">
+        <div id="popup-container">
+            <div id="popup-background"></div>
+            <div id="temple-counter">
+                <h2>זמן שחלף מאז חורבן בית המקדש</h2>
+                
+                <div class="time-row">
+                    <div class="unit"><div class="unit-value" id="years">0</div><div class="unit-title">שנים</div></div>
+                    <div class="unit"><div class="unit-value" id="months">0</div><div class="unit-title">חודשים</div></div>
+                    <div class="unit"><div class="unit-value" id="days">0</div><div class="unit-title">ימים</div></div>
+                </div>
+     
+                <div class="time-row">
+                    <div class="unit"><div class="unit-value" id="hours">0</div><div class="unit-title">שעות</div></div>
+                    <div class="unit"><div class="unit-value" id="minutes">0</div><div class="unit-title">דקות</div></div>
+                    <div class="unit"><div class="unit-value" id="seconds">0</div><div class="unit-title">שניות</div></div>
+                </div>
+     
+                <div class="action" style="font-size: 12.5px;">"והראנו בבניינו ושמחנו בתיקונו"</div>
             </div>
- 
-            <div class="time-row">
-                <div class="unit"><div class="unit-value" id="hours">0</div><div class="unit-title">שעות</div></div>
-                <div class="unit"><div class="unit-value" id="minutes">0</div><div class="unit-title">דקות</div></div>
-                <div class="unit"><div class="unit-value" id="seconds">0</div><div class="unit-title">שניות</div></div>
-            </div>
- 
-            <div class="action" style="font-size: 12.5px;">"והראנו בבניינו ושמחנו בתיקונו"</div>
         </div>
-    </div>
- 
+    </a>
+
     <script type="text/javascript" src="https://github.com/kdroidFilter/SecondTempleTimerLibrary/releases/download/0.1/SecondTempleTimer.js"></script>
     <script>
         function updateTimer() {
