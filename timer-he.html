@@ -24,25 +24,25 @@
             margin: 0;
             font-family: 'Bona Nova SC', Arial, sans-serif;
             color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
  
         #popup-container {
-            position: relative;
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-color: var(--overlay-background);
             border-radius: 10px;
             padding: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             overflow: hidden;
-            max-width: 300px;
-            width: auto;
-            height: auto;
             box-sizing: border-box;
             text-align: center;
+            /* הוספת Flexbox למרכוז התוכן הפנימי */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
  
         #popup-background {
@@ -55,7 +55,7 @@
             background-size: cover;
             background-position: center;
             opacity: var(--overlay-opacity);
-            z-index: 0;
+            z-index: -1; /* מאחורי התוכן */
             border-radius: 10px;
             filter: blur(1px);
         }
@@ -68,6 +68,7 @@
         #temple-counter h2 {
             color: var(--highlight-color);
             font-size: 16px;
+            margin-top: 0;
             margin-bottom: 10px;
             font-weight: 700;
             line-height: 1.2;
@@ -124,24 +125,21 @@
 </head>
  
 <body>
-    <a href="https://tosafix.vercel.app/#/developers:~:text=output%20processed_image.png-,%D7%98%D7%99%D7%99%D7%9E%D7%A8%20%D7%91%D7%99%D7%AA%20%D7%94%D7%9E%D7%A7%D7%93%D7%A9,-%D7%94%D7%95%D7%A1%D7%99%D7%A4%D7%95%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" style="text-decoration: none; color: inherit;">
+    <a href="https://tosafix.vercel.app/#/developers:~:text=output%20processed_image.png-,%D7%98%D7%99%D7%99%D7%9E%D7%A8%20%D7%91%D7%99%D7%AA%20%D7%94%D7%9E%D7%A7%D7%93%D7%A9,-%D7%94%D7%95%D7%A1%D7%99%D7%A4%D7%95%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
         <div id="popup-container">
             <div id="popup-background"></div>
             <div id="temple-counter">
                 <h2>זמן שחלף מאז חורבן בית המקדש</h2>
-                
                 <div class="time-row">
                     <div class="unit"><div class="unit-value" id="years">0</div><div class="unit-title">שנים</div></div>
                     <div class="unit"><div class="unit-value" id="months">0</div><div class="unit-title">חודשים</div></div>
                     <div class="unit"><div class="unit-value" id="days">0</div><div class="unit-title">ימים</div></div>
                 </div>
-     
                 <div class="time-row">
                     <div class="unit"><div class="unit-value" id="hours">0</div><div class="unit-title">שעות</div></div>
                     <div class="unit"><div class="unit-value" id="minutes">0</div><div class="unit-title">דקות</div></div>
                     <div class="unit"><div class="unit-value" id="seconds">0</div><div class="unit-title">שניות</div></div>
                 </div>
-     
                 <div class="action" style="font-size: 12.5px;">"והראנו בבניינו ושמחנו בתיקונו"</div>
             </div>
         </div>
@@ -151,7 +149,6 @@
     <script>
         function updateTimer() {
             var provider = new SecondTempleTimer.Provider();
- 
             document.getElementById('years').textContent = provider.getActualYears();
             document.getElementById('months').textContent = provider.getActualMonths();
             document.getElementById('days').textContent = provider.getActualDays();
@@ -159,7 +156,6 @@
             document.getElementById('minutes').textContent = provider.getActualMinutes();
             document.getElementById('seconds').textContent = provider.getActualSeconds();
         }
- 
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
