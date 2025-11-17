@@ -31,18 +31,17 @@
             width: 100%;
             height: 100%;
             background-color: var(--overlay-background);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
             overflow: hidden;
             box-sizing: border-box;
             text-align: center;
-            /* הוספת Flexbox למרכוז התוכן הפנימי */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            /* --- Responsive Units --- */
+            border-radius: clamp(8px, 3vw, 20px);
+            padding: clamp(10px, 4.5vw, 25px);
         }
  
         #popup-background {
@@ -55,8 +54,7 @@
             background-size: cover;
             background-position: center;
             opacity: var(--overlay-opacity);
-            z-index: -1; /* מאחורי התוכן */
-            border-radius: 10px;
+            z-index: -1;
             filter: blur(1px);
         }
  
@@ -67,31 +65,36 @@
  
         #temple-counter h2 {
             color: var(--highlight-color);
-            font-size: 16px;
             margin-top: 0;
-            margin-bottom: 10px;
             font-weight: 700;
             line-height: 1.2;
+
+            /* --- Responsive Units --- */
+            font-size: clamp(15px, 5vw, 28px);
+            margin-bottom: clamp(10px, 3vw, 20px);
         }
  
         .time-row {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 10px;
+            /* --- Responsive Units --- */
+            margin-bottom: clamp(10px, 3vw, 20px);
         }
  
         .unit {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 10px;
+            /* --- Responsive Units --- */
+            margin: 0 clamp(5px, 2.5vw, 15px);
         }
  
         .unit-title {
-          font-size: 14px;
-          color: var(--secondary-text-color);
-            margin-top: 4px;
+            color: var(--secondary-text-color);
+            /* --- Responsive Units --- */
+            font-size: clamp(13px, 4vw, 22px);
+            margin-top: clamp(4px, 1.2vw, 8px);
         }
  
         .unit-value {
@@ -99,26 +102,27 @@
             align-items: center;
             justify-content: center;
             border: none;
-            padding: 4px 6px;
-            border-radius: 6px;
             background-color: var(--unit-background-color);
             font-family: 'Digital-7', Arial, sans-serif;
-            font-size: 16px;
             font-weight: 700;
             color: var(--text-color);
-            min-width: 20px;
-            height: 24px;
-            line-height: 24px;
             text-align: center;
             box-sizing: border-box;
+            
+            /* --- Responsive Units --- */
+            padding: clamp(4px, 1.2vw, 8px) clamp(6px, 1.8vw, 12px);
+            border-radius: clamp(5px, 1.8vw, 10px);
+            font-size: clamp(16px, 5vw, 30px);
+            min-height: clamp(24px, 7.2vw, 45px);
         }
  
         .action {
-            font-size: 12px;
             color: var(--highlight-color);
-            margin-top: 8px;
             text-transform: uppercase;
             font-weight: 700;
+             /* --- Responsive Units --- */
+            font-size: clamp(12px, 3.8vw, 20px);
+            margin-top: clamp(8px, 2.4vw, 16px);
         }
  
     </style>
@@ -140,7 +144,7 @@
                     <div class="unit"><div class="unit-value" id="minutes">0</div><div class="unit-title">Mins</div></div>
                     <div class="unit"><div class="unit-value" id="seconds">0</div><div class="unit-title">Secs</div></div>
                 </div>
-                <div class="action" style="font-size: 12.5px;">"והראנו בבניינו ושמחנו בתיקונו"</div>
+                <div class="action">"והראנו בבניינו ושמחנו בתיקונו"</div>
             </div>
         </div>
     </a>
